@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.sun.xml.internal.bind.v2.TODO;
+import controllers.Application;
 import org.junit.*;
 
 import play.mvc.*;
@@ -17,7 +19,7 @@ import play.libs.F.*;
 
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
-
+import controllers.Application.*;
 
 /**
 *
@@ -40,5 +42,15 @@ public class ApplicationTest {
         assertThat(contentAsString(html)).contains("Your new application is ready.");
     }
 
+/*
+
+    @Test
+    public void TestAllTasks(){
+
+        assertThat(Application.tasks(), TODO);
+
+
+    }
+*/
 
 }
