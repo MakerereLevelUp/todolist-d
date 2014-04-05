@@ -1,17 +1,30 @@
 package models;
 
+import models.Task;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class TaskManager {
 
-    public static List<Task> listOfTasks() {
+   private ArrayList<Task> taskList = new ArrayList<Task>();
 
-        List<Task> listOfTasks = new ArrayList<Task>();
-        listOfTasks.add(new Task("Soccer"));
-        listOfTasks.add(new Task("swimming"));
-        listOfTasks.add(new Task("eating"));
+    public TaskManager(){
+    }
 
-        return listOfTasks;
+    public void addTask(Task task){
+
+        taskList.add(task);
+    }
+
+   public ArrayList<Task> getTaskList(){
+       return taskList;
+   }
+
+
+    public ArrayList<Task> tasks = new ArrayList<Task>();
+
+    public void add(Task task) {
+
+        tasks.add(task);
     }
 }

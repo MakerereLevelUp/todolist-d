@@ -1,17 +1,7 @@
-@(tasks: List[Task])
+@(message: String)
 
-@import helper._
+@main("Welcome to Play") {
 
-@main("Todo list") {
-
-<h1>@tasks.size() task(s)</h1>
-
-<ul>
-    @for(task <- tasks) {
-    <li>
-        @task
-        }
-    </li>
-</ul>
+@play20.welcome(message, style = "Java")
 
 }

@@ -2,16 +2,29 @@ import models.Task;
 import models.TaskManager;
 import org.junit.Test;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TaskManagerTest {
 
     @Test
-    public void shouldReturnListOfTasks(){
-        List<Task> tasks = TaskManager.listOfTasks();
-        assertThat(tasks.size(), is(3));
+    public void ItShouldBeEmptyWhenCreated(){
+
+        TaskManager taskManager = new TaskManager();
+        assertThat(taskManager.tasks.size(),is(0));
+
     }
+
+    @Test
+    public void ItShouldAddTask(){
+        TaskManager taskManager = new TaskManager();
+        taskManager.add(new Task("Testing storage",1));
+        assertThat(taskManager.tasks.size(), is(1));
+    }
+
+
+
+
 }
